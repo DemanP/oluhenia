@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="emblem.jpg" sizes="32x32" type="image/jpg">
+    <title>Oluheniá Registrati</title>
+    
+    <!-- Using jquery to add another .html files in code -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script> 
+    <script>
+        $(function(){
+            $("#web-up").load("web-up.html");
+            $("#page-end").load("page-end.html");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- <fieldset class="web-up">
+        <br class="one">
+        <a href="index.html" class="main-page-link">Oluheniá</a>
+        <br>
+        <br>
+    </fieldset> -->
+    <div id="web-up"></div>
+
+    <h1 class="green body">Oluheniá Registrati</h1>
+    <form action="action_page.php" method="post" class="unselectable body">
+        <div>
+            <label>Kit: </label>
+            <input type="text" placeholder="Svatoslav" name="first_name" required>
+        </div>
+
+        <div>
+            <label>Sekit: </label>
+            <input type="text" placeholder="Kamhuki" name="last_name" required>
+        </div>
+            <label>Shynite: </label>
+            <input type="text" placeholder="Yuriyovych" name="father_name" required/>
+        </div>
+
+        <br>
+
+        <fieldset class="gender-choose">
+            <legend>Hvuit:</legend>
+            <input type="radio" id="Tux" name="gender" value="1" required/>
+            <label for="Tux">Tux</label>
+            <input type="radio" id="Istofy" name="gender" value="2" required/>
+            <label for="Istofy">Istofy</label>
+            <input type="radio" id="Ovyvoh" name="gender" value="3" required/>
+            <label for="Ovyvoh">Ovyvoh</label>
+        </fieldset>
+
+        <br>
+
+        <div>
+            <label>Dati arc: </label>
+            <input type="date" name="birthday" placeholder="01.01.07" required/>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Email: </label>
+            <input type="email" name="email" required/>
+        </div>
+
+        <div>
+            <label>Bazard: </label>
+            <input placeholder="12345678" type="password" name="pass" required/>
+        </div>
+
+        <br>
+        <br>
+
+        <label>
+            <input type="checkbox">
+            Ķ kali etàdon Oluheniá
+        </label>
+        
+        <br>
+        <br>
+        
+        <div>
+            <button type="submit">Registrati</button>
+        </div>
+    </form>
+    
+    <div id="page-end"></div>
+</body>
+</html>

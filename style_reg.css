@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(34, 34, 34);
+    font-family: monospace;
+}
+
+label, legend, h1 {
+    color: white;
+    font-size: 2vw;
+    font-family: monospace;
+}
+h1 {
+    font-size: 3vw;
+}
+
+fieldset {
+    width: 30vw;
+    border: 0.2vw solid #04AA6D;
+}
+
+input {
+    background-color: ghostwhite;
+    border: 0.25vw solid rgb(30, 30, 30);
+    border-radius: 1vw;
+}
+input[type=text], input[type=date], input[type=email], input[type=password] {
+    width: 20vw;
+    height: 2vw;
+}
+input::placeholder, input {
+    font-size: 1vw;
+}
+input[type=radio] {
+    accent-color: #04AA6D;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+input[type=checkbox] {
+    accent-color: #04AA6D;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+button {
+    width: 15vw;
+    height: 3vw;
+    font-size: 2vw;
+    font-family: monospace;
+}
+
+.green {
+    color: #07cf86;
+}
+
+.unselectable {
+    user-select: none;
+}
+
+fieldset.web-up {
+    height: 5vw;
+    width: 97.5vw;
+    text-align: center;
+}
+
+.main-page-link {
+    text-decoration: none;
+    font-size: 2.5vw;
+    color: #04AA6D;
+}
+
+.main-page-link:visited, .main-page-link:hover, .main-page-link:active {
+    color: #04AA6D;
+}
+
+.body {
+    margin-left: 33vw;
+}
