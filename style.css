@@ -20,6 +20,10 @@ img {
     border-radius: 1vw;
 }
 
+.territory_btn:hover {
+    background-color: #3e8e41;
+}
+
 @media only screen 
 and (min-device-width : 1000px) {
     label {
@@ -120,7 +124,6 @@ and (min-device-width : 1000px) {
         background-color: #3e8e41;
     } */
     .reg_btn {
-        /* background-color: #04AA6D; */
         color: white;
         font-size: 1.5vw;
         width: 8vw;
@@ -175,9 +178,6 @@ and (min-device-width : 1000px) {
         width: 8vw;
         height: 2.75vw;
         border-color: transparent;
-    }
-    .territory_btn:hover {
-        background-color: #3e8e41;
     }
     
     .emblem_div {
@@ -398,12 +398,25 @@ and (max-device-width : 420px) {
         margin-bottom: 14vw;
     }
 
-    .territory {
+    /* .territory {
         width: 20vw;
         float: left;
         margin-top: -6vw;
         margin-right: 3vw;
         margin-left: 3vw;
+    } */
+    
+    .territory {
+        width: 25vw;
+        margin-left: 35vw;
+    }
+    .territory_btn {
+        background-color: #04AA6D;
+        color: white;
+        font-size: 1.5vw;
+        width: 8vw;
+        height: 2.75vw;
+        border-color: transparent;
     }
 
     .emblem_div {
@@ -462,7 +475,7 @@ and (max-device-width : 420px) {
         margin-left: 30vw;
     }
     .end {
-        right: 0;
+        right: 2vw;
     }
     .bottom {
         position: fixed;
