@@ -407,7 +407,7 @@ and (max-device-width : 420px) {
     } */
     
     .territory {
-        width: 25vw;
+        width: 50vw;
         margin-left: 35vw;
     }
     .territory_btn {
@@ -434,7 +434,7 @@ and (max-device-width : 420px) {
     }
 
     .passport {
-        width: 20vw;
+        width: 40vw;
     }
     .passport_btn {
         background-color: #04AA6D;
