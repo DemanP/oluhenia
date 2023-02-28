@@ -13,7 +13,20 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script> 
     <script> 
         $(function(){
-            $("#web-up").load("web-up.html");
+            $("#web-up").load("web-up.html", function() {
+                var cookies = {};
+                document.cookie.split("; ").forEach(element => {
+                    cookies[element.split("=")[0]] = element.split("=")[1];
+                });
+                
+                //console.log(cookies);
+
+                if (typeof cookies['logged_in'] !== 'undefined') {
+                    const reg_btn = document.getElementById("registration");
+                    reg_btn.innerHTML = "Diźregi";
+                    reg_btn.href = "logout.php";
+                }
+            });
             $("#page-end").load("page-end.html");
         });
     </script>

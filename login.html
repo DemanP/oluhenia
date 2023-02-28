@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="icon" href="emblem.jpg" sizes="32x32" type="image/jpg">
-    <title>Oluheniá Registrati</title>
+    <title>Oluheniá Regi</title>
     
     <!-- Using jquery to add another .html files in code -->
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <!-- <script src="local-storage.js"></script> -->
     <script>
         $(function() {
             $("#web-up").load("web-up.html");
@@ -21,6 +20,8 @@
                 event.preventDefault();
                 $.post( this.action, $(this).serializeArray(), function( data ) {
                     console.log(data);
+                    
+                    console.log(data.error);
                     
                     if (!data || data.error) {
                         error = document.getElementById("error");
@@ -35,7 +36,7 @@
                         return;
                     }
                     location.href = "index.html";
-                    //$('#web-up').html(data);
+                  //  $('#web-up').html(data);
                 });
             });
         });
@@ -45,47 +46,9 @@
 <body>
     <div id="web-up"></div>
 
-    <h1>Oluheniá Registrati</h1>
+    <h1>Oluheniá Regi</h1>
 
-    <form action="registration.php" method="post" class="unselectable">
-        <div class="center">
-            <label>Kit: </label>
-            <input type="text" placeholder="Svatoslav" name="first_name" required>
-        </div>
-
-        <div class="center">
-            <label>Sekit: </label>
-            <input type="text" placeholder="Kamhuki" name="last_name" required>
-        </div>
-
-        <div class="center">
-            <label>Shynite: </label>
-            <input type="text" placeholder="Yuriyovych" name="father_name" required/>
-        </div>
-
-        <br>
-
-        <div class="center">
-            <fieldset class="gender-choose center">
-                <legend>Hvuit:</legend>
-                <label for="Tux">Tux</label>
-                <input type="radio" id="Tux" name="gender" value="1" required/>
-                <label for="Istofy">Istofy</label>
-                <input type="radio" id="Istofy" name="gender" value="2" required/>
-                <label for="Ovyvoh">Ovyvoh</label>
-                <input type="radio" id="Ovyvoh" name="gender" value="3" required/>
-            </fieldset>
-        </div>
-
-        <br>
-
-        <div class="center">
-            <label>Dati arc: </label>
-            <input type="date" name="birthday" placeholder="01.01.07" required/>
-        </div>
-
-        <br>
-
+    <form action="login.php" method="post" class="unselectable">
         <div class="center">
             <label>Email: </label>
             <input type="email" name="email" required/>
@@ -109,13 +72,9 @@
         <br>
         
         <div class="center">
-            <button type="submit" class="end_reg_btn">Registrati</button>
+            <button type="submit" class="end_reg_btn">Regi</button>
         </div>
-
-        <br>
     </form>
-
-    <a href="login.html" class="center" style="font-size: 1vw;">Hî won wud akaunt?</a>
     
     <div id="page-end"></div>
 </body>

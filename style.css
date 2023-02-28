@@ -6,6 +6,19 @@ body {
     font-family: monospace;
     color: black;
     font-size: 0;
+    margin-top: 0px;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-size: 2vw;
+    text-align: center;
+}
+
+form {
+    font-size: 1vw;
 }
 
 label {
@@ -20,9 +33,51 @@ img {
     border-radius: 1vw;
 }
 
+input {
+    background-color: ghostwhite;
+    border: 0.1vw solid rgb(30, 30, 30);
+    border-radius: 0.5vw;
+}
+input[type=text], input[type=date], input[type=email], input[type=password] {
+    width: 10vw;
+    height: 2.5vh;
+}
+input::placeholder, input {
+    font-size: 1vw;
+}
+input[type=radio] {
+    accent-color: #04AA6D;
+    /* width: 1.5vw;
+    height: 1.5vw; */
+}
+input[type=checkbox] {
+    accent-color: #04AA6D;
+}
+
 .territory_btn:hover {
     background-color: #3e8e41;
 }
+
+.unselectable {
+    user-select: none;
+}
+
+.gender-choose {
+    border: 0.2vw solid #04AA6D;
+}
+
+.end_reg_btn {
+    background-color: #04AA6D;
+    border-radius: 10vw;
+    border: none;
+}
+
+.news-text {
+    font-size: 1rem;
+    width: 50%;
+    white-space: pre-wrap;
+}
+
 
 @media only screen 
 and (min-device-width : 1000px) {
@@ -30,21 +85,37 @@ and (min-device-width : 1000px) {
         margin-left: 2vw;
         font-size: 1.5vw;
     }
+    pre {
+        margin-left: 2vw;
+        font-size: 1vw;
+    }
 
     fieldset.web-up {
-        height: 10vh;
+        height: 5vw;
         background-color: #04AA6D;
         font-size: 0;
-        width: 100vw;
+        margin-left: 0;
+        width: 100%;
     }
 
 
     legend {
-        font-size: 2vw;
+        font-size: 200%;
     }
-    .gender-choose {
-        width: 30vw;
-        border: 0.2vw solid #04AA6D;
+    
+    input[type=checkbox] {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+    input[type=radio] {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+
+    .end_reg_btn {
+        width: 10vw;
+        height: 5vh;
+        font-size: 100%;
     }
 
 
@@ -104,12 +175,12 @@ and (min-device-width : 1000px) {
         text-decoration: none;
         font-size: 2.5vw;
         color: white;
-        text-shadow: -0.1vw -0.1vw 0 #000, 0.1vw -0.1vw 0 #000, -0.1vw 0.1vw 0 #000, 0.1vw 0.1vw 0 #000;
+        /* text-shadow: -0.1vw -0.1vw 0 #000, 0.1vw -0.1vw 0 #000, -0.1vw 0.1vw 0 #000, 0.1vw 0.1vw 0 #000; */
     }
 
     .main-page-link:visited, .main-page-link:hover, .main-page-link:active {
         color: white;
-        text-shadow: -0.1vw -0.1vw 0 #000, 0.1vw -0.1vw 0 #000, -0.1vw 0.1vw 0 #000, 0.1vw 0.1vw 0 #000;
+        /* text-shadow: -0.1vw -0.1vw 0 #000, 0.1vw -0.1vw 0 #000, -0.1vw 0.1vw 0 #000, 0.1vw 0.1vw 0 #000; */
     }
 
     /* .reg_btn {
@@ -148,6 +219,7 @@ and (min-device-width : 1000px) {
     br.medium { display: block; margin: 3vh 0; content: " "; }
     br.big { display: block; margin: 5vh 0; content: " "; }
     br.x-big { display: block; margin: 10vh 0; content: " "; }
+    br.width { display: block; margin: 1vw 0; content: " "; }
 
 
 
@@ -234,7 +306,10 @@ and (min-device-width : 1000px) {
     }
 
     .center {
-        margin-left: 30vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     .end {
         right: 1vw;
@@ -252,26 +327,30 @@ and (min-device-width : 1000px) {
 @media only screen 
 and (min-device-width : 300px)
 and (max-device-width : 420px) {
-    /* body {
-        background-color: rgb(34, 34, 34);
-        font-family: monospace;
-        color: white;
-        font-size: 0;
-    } */
-
     label {
-        /* color: white; */
         margin-left: 2vw;
         font-size: 4.5vw;
     }
+    pre {
+        margin-left: 2vw;
+        font-size: 3.5vw;
+    }
 
-    /* fieldset {
-        border: 0.5vw solid green;
-    } */
     fieldset.web-up {
-        height: 10vh;
+        height: 10vw;
         background-color: #04AA6D;
-        font-size: 0.1vw;
+        font-size: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    legend {
+        font-size: 500%;
+    }
+
+    .end_reg_btn {
+        width: 25vw;
+        height: 5vh;
     }
 
     .empty {
@@ -283,9 +362,9 @@ and (max-device-width : 420px) {
     .dropbtn {
         background-color: #04AA6D;
         color: white;
-        width: 8vw;
-        height: 2.75vw;
-        font-size: 1.5vw;
+        width: 12vw;
+        height: 5.5vw;
+        font-size: 3vw;
         border: none;
     }
     .dropdown {
@@ -325,17 +404,16 @@ and (max-device-width : 420px) {
 
     .main-page-link {
         margin-left: 3vw;
-        margin-right: 23vw;
+        margin-right: 3vw;
         text-decoration: none;
         font-size: 4.5vw;
         color: white;
-        text-shadow: -0.1vw -0.1vw 0 #000, 0.1vw -0.1vw 0 #000, -0.1vw 0.1vw 0 #000, 0.1vw 0.1vw 0 #000;
+        /* text-shadow: -0.1vw -0.1vw 0 #000, 0.1vw -0.1vw 0 #000, -0.1vw 0.1vw 0 #000, 0.1vw 0.1vw 0 #000; */
     }
 
     .main-page-link:visited, .main-page-link:hover, .main-page-link:active {
         color: white;
-        text-shadow: -0.1vw -0.1vw 0 #000, 0.1vw -0.1vw 0 #000, -0.1vw 0.1vw 0 #000, 0.1vw 0.1vw 0 #000;
-        /* -webkit-text-stroke: 0.2vw solid black; */
+        /* text-shadow: -0.1vw -0.1vw 0 #000, 0.1vw -0.1vw 0 #000, -0.1vw 0.1vw 0 #000, 0.1vw 0.1vw 0 #000; */
     }
 
     /* .reg_btn {
@@ -352,7 +430,7 @@ and (max-device-width : 420px) {
     .reg_btn {
         background-color: #04AA6D;
         color: white;
-        font-size: 1.5vw;
+        font-size: 3vw;
         width: 8vw;
         height: 2.75vw;
         width: 8%;
@@ -407,15 +485,14 @@ and (max-device-width : 420px) {
     } */
     
     .territory {
-        width: 50vw;
-        margin-left: 20vw;
+        width: 100%;
     }
     .territory_btn {
         background-color: #04AA6D;
         color: white;
-        font-size: 1.5vw;
-        width: 8vw;
-        height: 2.75vw;
+        font-size: 3vw;
+        width: 14vw;
+        height: 5.5vw;
         border-color: transparent;
     }
 
@@ -424,7 +501,7 @@ and (max-device-width : 420px) {
         margin-right: 3vw;
     }
     .emblem {
-        width: 20vw;
+        width: 10vw;
     }
     .emblem_fig {
         color: rgb(72, 255, 0);
@@ -434,14 +511,14 @@ and (max-device-width : 420px) {
     }
 
     .passport {
-        width: 40vw;
+        width: 20vw;
     }
     .passport_btn {
         background-color: #04AA6D;
         color: white;
-        font-size: 1.5vw;
-        width: 8vw;
-        height: 2.75vw;
+        font-size: 3vw;
+        width: 14vw;
+        height: 5.5vw;
         border-color: transparent;
     }
     .passport_btn:hover {
@@ -457,9 +534,9 @@ and (max-device-width : 420px) {
     .flag-emblem_btn {
         background-color: #04AA6D;
         color: white;
-        font-size: 1.5vw;
-        width: 12vw;
-        height: 2.75vw;
+        font-size: 3vw;
+        width: 21vw;
+        height: 5.5vw;
         border-color: transparent;
     }
     .flag-emblem_btn:hover {
@@ -472,7 +549,10 @@ and (max-device-width : 420px) {
     }
 
     .center {
-        margin-left: 30vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     .end {
         right: 2vw;

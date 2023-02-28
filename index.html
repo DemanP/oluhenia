@@ -10,10 +10,22 @@
     <title>Oluheniá</title>
 
     <!-- Using jquery to add another .html files in code -->
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="news.js"></script>
     <script>
         $(function(){
-            $("#web-up").load("web-up.html");
+            $("#web-up").load("web-up.html", function() {
+                var cookies = {};
+                document.cookie.split("; ").forEach(element => {
+                    cookies[element.split("=")[0]] = element.split("=")[1];
+                });
+
+                if (typeof cookies['logged_in'] !== 'undefined') {
+                    const reg_btn = document.getElementById("registration");
+                    reg_btn.innerHTML = "Diźregi";
+                    reg_btn.href = "logout.php";
+                }
+            });
             $("#page-end").load("page-end.html");
         });
     </script>
@@ -27,10 +39,17 @@
         <img src="flag.jpg" class="big-flag">
         <header class="title">Oluheniá</header>
     </div>
+
     
     <br class="giant">
+    
+    <label id="test">Oluheniá - cebàwrito zitóta git abeĺ Levandivka. Tewot dewritò zitóta e norfolk. Oluheniá wud vi gojot.</label>
+    
+    <br>
 
-    <label>Oluheniá - Cèbawrito zitóta git abeĺ Levandivka. Tewot dewritò zitóta e norfolk. Oluhenià wud vi gojot.</label>
+    <a href="https://t.me/oluhenia_translate_bot" target="_blank">Oluheniá Translate Bot</a>
+
+    <div id="post-btn"></div>
 
     <div id="page-end"></div>
 </body>

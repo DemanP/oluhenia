@@ -1,7 +1,5 @@
 <?php
 
-echo("At least tried connecting");
-
 function OpenCon()
 {
     $dbhost = "localhost";

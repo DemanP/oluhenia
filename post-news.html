@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="emblem.jpg" sizes="32x32" type="image/jpg">
+    <title>Oluheniá Lica Post</title>
+
+    <!-- Using jquery to add another .html files in code -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+        function show_image() {
+            var img = document.getElementById("image");
+            const input = document.getElementById("file-picker");
+
+            if (!img) {
+                img = document.createElement("img");
+                img.setAttribute("id", "image");
+            }
+            img.src = URL.createObjectURL(input.files[0]);
+            console.log(img.width);
+            const div = document.getElementById("image-div");
+            img.style.cssText += 'height: 35rem;';
+            //div.style.cssText += "width: " + input.files[0].width + "px; border: 0.2rem solid black;";
+            div.appendChild(img);
+        }
+
+        $(function(){
+            $("#web-up").load("web-up.html", function() {
+                var cookies = {};
+                document.cookie.split("; ").forEach(element => {
+                    cookies[element.split("=")[0]] = element.split("=")[1];
+                });
+
+                if (typeof cookies['logged_in'] !== 'undefined') {
+                    const reg_btn = document.getElementById("registration");
+                    reg_btn.innerHTML = "Diźregi";
+                    reg_btn.href = "logout.php";
+                }
+            });
+            $("#page-end").load("page-end.html");
+        });
+    </script>
+</head>
+<body>
+    <div id="web-up"></div>
+
+    <br class="mini">
+
+    <form action="post-news.php" method="post" enctype="multipart/form-data">
+        <input type="button" id="loadFileXml" value="  Piktura  " onclick="document.getElementById('file-picker').click();" />
+        <input type="file" style="display: none;" id="file-picker" onchange="show_image();" name="choosefile"/> <!--style="display:none;"-->
+        
+        <br>
+        <div id="image-div"></div>
+        
+        <br>
+        <input type="text" name="title" placeholder="Title">
+        <br><br>
+
+        <textarea class="news-text" name="text" placeholder="Text" rows="20" cols="70"></textarea>
+
+        <br>
+
+        <button type="submit">Post</button>
+    </form>
+
+    <div id="page-end"></div>
+</body>
+</html>
